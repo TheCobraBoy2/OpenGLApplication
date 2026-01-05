@@ -6,7 +6,7 @@
 int main()
 {
   Core::ApplicationSpecification appSpec;
-  appSpec.Name = "Architecture";
+  appSpec.Name = "Application";
   appSpec.WindowSpec.Width = 1920;
   appSpec.WindowSpec.Height = 1080;
 
