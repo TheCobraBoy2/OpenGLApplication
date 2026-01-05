@@ -13,7 +13,7 @@
 
 AppLayer::AppLayer()
 {
-  std::println("Created new AppLayer!");
+  // std::println("Created new AppLayer!");
 
   // Create shaders
   m_Shader = Renderer::CreateGraphicsShader("Shaders/Fullscreen.vert.glsl", "Shaders/Flame.frag.glsl");
@@ -62,7 +62,7 @@ AppLayer::~AppLayer()
 
 void AppLayer::OnEvent(Core::Event &event)
 {
-  std::println("{}", event.ToString());
+  // std::println("{}", event.ToString());
 
   Core::EventDispatcher dispatcher(event);
   dispatcher.Dispatch<Core::MouseButtonPressedEvent>([this](Core::MouseButtonPressedEvent &e)
@@ -129,7 +129,7 @@ bool AppLayer::OnMouseMoved(Core::MouseMovedEvent &event)
 
 bool AppLayer::OnWindowClosed(Core::WindowClosedEvent &event)
 {
-  std::println("Window Closed!");
+  // std::println("Window Closed!");
 
   return false;
 }

@@ -14,7 +14,7 @@
 
 OverlayLayer::OverlayLayer()
 {
-  std::println("Created new OverlayLayer!");
+  // std::println("Created new OverlayLayer!");
 
   // Create shaders
   m_Shader = Renderer::CreateGraphicsShader("Shaders/Transform.vert.glsl", "Shaders/Texture.frag.glsl");
@@ -139,7 +139,6 @@ bool OverlayLayer::OnMouseButtonPressed(Core::MouseButtonPressedEvent &event)
 {
   if (!IsButtonHovered())
     return false;
-
   auto voidLayer = Core::Application::Get().GetLayer<VoidLayer>();
   if (voidLayer)
   {
@@ -148,7 +147,7 @@ bool OverlayLayer::OnMouseButtonPressed(Core::MouseButtonPressedEvent &event)
   else
   {
     auto appLayer = Core::Application::Get().GetLayer<AppLayer>();
-    // appLayer->TransitionTo<VoidLayer>();
+    appLayer->TransitionTo<VoidLayer>();
   }
 
   return true;
