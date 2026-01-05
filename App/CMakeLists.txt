@@ -33,6 +33,7 @@ target_link_libraries(App
 target_include_directories(App PRIVATE src)
 
 set_target_properties(App PROPERTIES
+  WIN32_EXECUTABLE TRUE 
   VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/App"
 )
 
